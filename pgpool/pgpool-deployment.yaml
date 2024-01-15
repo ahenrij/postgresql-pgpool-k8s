@@ -43,6 +43,13 @@ spec:
               value: "postgres"
             - name: PGPOOL_ENABLE_LDAP
               value: "no"
+            - name: PGPOOL_POSTGRES_CUSTOM_USERS
+              value: "user01eq1, user01eq2, user01eq3, user01eq4, user01eq5, user01eq6, user01eq7, user01eq8, user01eq9, user01eq10, user01eq11, user01eq12, user01eq13, user02eq1, user02eq2, user02eq3, user02eq4, user02eq5, user02eq6, user02eq7, user02eq8, user02eq9, user02eq10, user02eq11, user02eq12, user02eq13"
+            - name: PGPOOL_POSTGRES_CUSTOM_PASSWORDS
+              valueFrom:
+                secretKeyRef:
+                  name: pgpool-secrets
+                  key: custom-user-passwords
             - name: PGPOOL_POSTGRES_USERNAME
               value: "postgres"
             - name: PGPOOL_POSTGRES_PASSWORD
