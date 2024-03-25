@@ -73,7 +73,9 @@ spec:
             - name: PGPOOL_ENABLE_LOG_PER_NODE_STATEMENT
               value: "no"
             - name: PGPOOL_CHILD_LIFE_TIME
-              value: ""
+              value: '300'
+            - name: PGPOOL_CONNECTION_LIFE_TIME
+              value: '300'
             - name: PGPOOL_ENABLE_TLS
               value: "no"
           ports:
